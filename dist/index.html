@@ -2,10 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Getting Started</title>
-    <script src="https://unpkg.com/lodash@4.17.20"></script>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
   </head>
   <body>
+    <div class="section">
+      <h1 class="title is-1 has-text-centered has-text-primary">Weather app JS</h1>
+      <div class="container has-text-centered">
+        <h3 class="title is-3 mb-1">Search by City</h3>
+        <input class="searchBar mt-1" type="text" placeholder="Search City...">
+        <div class="toggle">
+          <span>°Celsius</span>
+          <label class="switch">
+            <input class="toggleF" type="checkbox">
+            <span class="slider"></span>
+          </label>
+          <span>°Farenheit</span>
+        </div>
+      </div>
+      <div class="container has-text-centered">
+        <div class="columns">
+          <div class="column is-full mt-4">
+            <h2 class="city title is-4 mb-0"></h2>
+            <span class="weatherCond mgb-small"></span>
+          </div>
+          <div class="column is-one-quarter" id="desc">
+            <p>Weather</p>
+            <span class="weatherDesc"></span></span>
+          </div>
+          <div class="column is-one-quarter" id="temp">
+            <p>Temperature</p>
+            <span class="temp"></span>
+            <span class="unit"></span>
+          </div>
+          <div class="column is-one-quarter" id="feelsLike">
+            <p>Feels Like</p>
+            <span class="feelsLike"></span>
+          </div>
+          <div class="column is-one-quarter" id="hum">
+            <p>Humidity</p>
+            <span class="humidty"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
