@@ -14,4 +14,6 @@ const setValues = (valObj) => {
   humidity.textContent = valObj.humidity;
 }
 
+
+
 export {setValues};

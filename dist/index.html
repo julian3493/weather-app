@@ -10,14 +10,12 @@
       <h1 class="title is-1 has-text-centered has-text-primary">Weather app JS</h1>
       <div class="container has-text-centered">
         <h3 class="title is-3 mb-1">Search by City</h3>
-        <input class="searchBar mt-1" type="text" placeholder="Search City...">
-        <div class="toggle">
-          <span>°Celsius</span>
-          <label class="switch">
-            <input class="toggleF" type="checkbox">
-            <span class="slider"></span>
-          </label>
-          <span>°Farenheit</span>
+        <input class="search mt-1" type="text" placeholder="Search City">
+        <div class="field">
+          <input class="is-checkradio" id="celsius" type="radio" name="radioBtn" checked="checked">
+          <label for="celsius">°Celsius</label>
+          <input class="is-checkradio" id="farenheit" type="radio" name="radioBtn">
+          <label for="farenheit">°Farenheit</label>
         </div>
       </div>
       <div class="container has-text-centered">
@@ -43,6 +41,9 @@
             <p>Humidity</p>
             <span class="humidity"></span></span>
           </div>
+        </div>
+        <div class="img">
+
         </div>
       </div>
     </div>
