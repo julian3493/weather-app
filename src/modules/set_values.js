@@ -12,31 +12,32 @@ const setValues = (valObj) => {
   temp.textContent = valObj.temp;
   feelsLike.textContent = valObj.feelsLike;
   humidity.textContent = valObj.humidity;
-}
+};
 
 const getUnits = () => {
-  const opt = document.getElementsByName('radioBtn'); 
-              
-  for(let i = 0; i < opt.length; i++) { 
-    if(opt[i].checked) {
-      return opt[i].value
+  const opt = document.getElementsByName('radioBtn');
+  let uni = '';
+  for (let i = 0; i < opt.length; i += 1) {
+    if (opt[i].checked) {
+      uni = opt[i].value;
     }
-  } 
-}
+  }
+  return uni;
+};
 
 const setUnits = () => {
   const unit = getUnits();
   const spans = document.getElementsByClassName('unit');
   if (unit === 'metric') {
-    for (let i=0; i < spans.length; i++) {
-      spans[i].textContent = '°C'
+    for (let i = 0; i < spans.length; i += 1) {
+      spans[i].textContent = '°C';
     }
   }
   if (unit === 'imperial') {
-    for (let i=0; i < spans.length; i++) {
-      spans[i].textContent = '°F'
+    for (let i = 0; i < spans.length; i += 1) {
+      spans[i].textContent = '°F';
     }
   }
-}
+};
 
-export {setValues, getUnits, setUnits};
+export { setValues, getUnits, setUnits };
