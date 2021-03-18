@@ -14,6 +14,19 @@ const setValues = (valObj) => {
   humidity.textContent = valObj.humidity;
 }
 
+const getUnits = () => {
+  const opt = document.getElementsByName('radioBtn'); 
+              
+  for(let i = 0; i < opt.length; i++) { 
+    if(opt[i].checked) {
+      return opt[i].value
+    }
+  } 
+}
 
+const setUnits = () => {
+  const unit = getUnits();
+  console.log(typeof unit)
+}
 
-export {setValues};
+export {setValues, getUnits, setUnits};
