@@ -26,7 +26,17 @@ const getUnits = () => {
 
 const setUnits = () => {
   const unit = getUnits();
-  console.log(typeof unit)
+  const spans = document.getElementsByClassName('unit');
+  if (unit === 'metric') {
+    for (let i=0; i < spans.length; i++) {
+      spans[i].textContent = '°C'
+    }
+  }
+  if (unit === 'imperial') {
+    for (let i=0; i < spans.length; i++) {
+      spans[i].textContent = '°F'
+    }
+  }
 }
 
 export {setValues, getUnits, setUnits};
