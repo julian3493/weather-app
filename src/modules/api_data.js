@@ -1,4 +1,5 @@
 import { setValues, getUnits } from './set_values'
+import { setImg } from './add_img' 
 
 const getData = async (city) => {
   const unit = getUnits();
@@ -10,10 +11,9 @@ const getData = async (city) => {
   values['weatherDesc'] = data.weather[0].description;
   values['temp'] = data.main.temp;
   values['feelsLike'] = data.main.feels_like;
-  values['humidity'] = data.main.humidity
-  console.log(data);
-  console.log(values);
+  values['humidity'] = data.main.humidity;
   setValues(values);
+  setImg();
 }
 
 export {getData};
