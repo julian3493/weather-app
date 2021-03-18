@@ -1,4 +1,4 @@
-const setValues = (valObj) => {
+const setValues = (data) => {
   const city = document.querySelector('h2');
   const weatherCond = document.querySelector('.weatherCond');
   const weatherDesc = document.querySelector('.weatherDesc');
@@ -6,12 +6,12 @@ const setValues = (valObj) => {
   const feelsLike = document.querySelector('.feelsLike');
   const humidity = document.querySelector('.humidity');
 
-  city.textContent = valObj.city;
-  weatherCond.textContent = valObj.weather;
-  weatherDesc.textContent = valObj.weatherDesc;
-  temp.textContent = valObj.temp;
-  feelsLike.textContent = valObj.feelsLike;
-  humidity.textContent = valObj.humidity;
+  city.textContent = data.name;
+  weatherCond.textContent = data.weather[0].main;
+  weatherDesc.textContent = data.weather[0].description;
+  temp.textContent = data.main.temp;
+  feelsLike.textContent = data.main.feels_like;
+  humidity.textContent = data.main.humidity;
 };
 
 const getUnits = () => {
