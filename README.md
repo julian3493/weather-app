@@ -1,5 +1,5 @@
 # weather-app
-> In this project I build a small page where you can check the weather of a city it also shows temperature, humidity and sensation of temperature, i get those values using an api and another diferent api to get random images. For this project I used webpack and ES6 modules
+> In this project I build a small page where you can check the weather of a city it also shows temperature, humidity, and sensation of temperature, I get those values using an API and another different API to get random images. For this project, I used webpack and ES6 modules.
 
  ![screenshot](./assets/images/Screenshot_1.png)
 
